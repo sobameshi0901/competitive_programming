@@ -65,8 +65,10 @@ int main() {
   int val = 0;
   for ( int i = 1; i < n; i++) {
     if(h[i-1] <= h[i]) val++;
-    else val = 0;
-    ans = max(ans, val);
+    else {
+      ans = max(ans, val);
+      val = 0;
+    }
   }
   cout << ans << endl;
   return 0;
